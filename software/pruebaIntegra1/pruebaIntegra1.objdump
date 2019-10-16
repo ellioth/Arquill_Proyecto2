@@ -1,0 +1,1352 @@
+
+pruebaIntegra1.elf:     file format elf32-littlenios2
+pruebaIntegra1.elf
+architecture: nios2:r1, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00001020
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00001000 paddr 0x00001000 align 2**12
+         filesz 0x00000020 memsz 0x00000020 flags r-x
+    LOAD off    0x00001020 vaddr 0x00001020 paddr 0x00001020 align 2**12
+         filesz 0x0000075c memsz 0x0000075c flags r-x
+    LOAD off    0x0000177c vaddr 0x0000177c paddr 0x00001780 align 2**12
+         filesz 0x00000004 memsz 0x00000004 flags rw-
+    LOAD off    0x00001784 vaddr 0x00001784 paddr 0x00001784 align 2**12
+         filesz 0x00000000 memsz 0x00000030 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .entry        00000020  00001000  00001000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .exceptions   00000000  00001020  00001020  00001780  2**0
+                  CONTENTS
+  2 .text         00000744  00001020  00001020  00001020  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .rodata       00000018  00001764  00001764  00001764  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rwdata       00000004  0000177c  00001780  0000177c  2**2
+                  CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
+  5 .bss          00000030  00001784  00001784  00001784  2**2
+                  ALLOC, SMALL_DATA
+  6 .RAM          00000000  000017b4  000017b4  00001780  2**0
+                  CONTENTS
+  7 .comment      00000023  00000000  00000000  00001780  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 00000170  00000000  00000000  000017a8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   00000fc1  00000000  00000000  00001918  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 000007a8  00000000  00000000  000028d9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   000007f6  00000000  00000000  00003081  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  000001e0  00000000  00000000  00003878  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    0000069f  00000000  00000000  00003a58  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    00000615  00000000  00000000  000040f7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  0000470c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_ranges 000000a8  00000000  00000000  00004720  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .thread_model 00000003  00000000  00000000  0000566e  2**0
+                  CONTENTS, READONLY
+ 18 .cpu          00000008  00000000  00000000  00005671  2**0
+                  CONTENTS, READONLY
+ 19 .qsys         00000001  00000000  00000000  00005679  2**0
+                  CONTENTS, READONLY
+ 20 .simulation_enabled 00000001  00000000  00000000  0000567a  2**0
+                  CONTENTS, READONLY
+ 21 .stderr_dev   00000004  00000000  00000000  0000567b  2**0
+                  CONTENTS, READONLY
+ 22 .stdin_dev    00000004  00000000  00000000  0000567f  2**0
+                  CONTENTS, READONLY
+ 23 .stdout_dev   00000004  00000000  00000000  00005683  2**0
+                  CONTENTS, READONLY
+ 24 .sopc_system_name 00000008  00000000  00000000  00005687  2**0
+                  CONTENTS, READONLY
+ 25 .quartus_project_dir 00000034  00000000  00000000  0000568f  2**0
+                  CONTENTS, READONLY
+ 26 .jdi          00004759  00000000  00000000  000056c3  2**0
+                  CONTENTS, READONLY
+ 27 .sopcinfo     0005b27b  00000000  00000000  00009e1c  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00001000 l    d  .entry	00000000 .entry
+00001020 l    d  .exceptions	00000000 .exceptions
+00001020 l    d  .text	00000000 .text
+00001764 l    d  .rodata	00000000 .rodata
+0000177c l    d  .rwdata	00000000 .rwdata
+00001784 l    d  .bss	00000000 .bss
+000017b4 l    d  .RAM	00000000 .RAM
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_alt_sim_info	00000000 .debug_alt_sim_info
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 ../pruebaIntegra1_bsp//obj/HAL/src/crt0.o
+00001058 l       .text	00000000 alt_after_alt_main
+00000000 l    df *ABS*	00000000 hello_world_small.c
+00000000 l    df *ABS*	00000000 alt_load.c
+00000000 l    df *ABS*	00000000 alt_main.c
+00000000 l    df *ABS*	00000000 alt_putstr.c
+00000000 l    df *ABS*	00000000 alt_sys_init.c
+00000000 l    df *ABS*	00000000 altera_avalon_jtag_uart_write.c
+00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
+00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
+00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
+00000000 l    df *ABS*	00000000 strlen.c
+0000167c g     F .text	0000002c alt_main
+00001780 g       *ABS*	00000000 __flash_rwdata_start
+0000177c g     O .rwdata	00000004 UART
+00001784 g     O .bss	00000004 S7_3_PTR
+000016a8 g     F .text	00000038 alt_putstr
+00001740 g     F .text	00000008 altera_nios2_gen2_irq_init
+00001788 g     O .bss	00000004 UART_PTR
+00001000 g     F .entry	0000000c __reset
+00001020 g       *ABS*	00000000 __flash_exceptions_start
+000017ac g     O .bss	00000004 alt_argv
+0000977c g       *ABS*	00000000 _gp
+0000107c g     F .text	000000a0 printNum
+0000178c g     O .bss	00000004 LED_PTR
+000017b4 g       *ABS*	00000000 __bss_end
+00001790 g     O .bss	00000004 S7_2_PTR
+00001738 g     F .text	00000004 alt_dcache_flush_all
+00001780 g       *ABS*	00000000 __ram_rwdata_end
+0000177c g       *ABS*	00000000 __ram_rodata_end
+0000111c g     F .text	000000a8 setNum
+000017b4 g       *ABS*	00000000 end
+00002000 g       *ABS*	00000000 __alt_stack_pointer
+00001704 g     F .text	00000034 altera_avalon_jtag_uart_write
+00001020 g     F .text	0000003c _start
+00001700 g     F .text	00000004 alt_sys_init
+0000177c g       *ABS*	00000000 __ram_rwdata_start
+00001764 g       *ABS*	00000000 __ram_rodata_start
+00001794 g     O .bss	00000004 SW_PTR
+000017b4 g       *ABS*	00000000 __alt_stack_base
+00001798 g     O .bss	00000004 S7_1_PTR
+0000105c g     F .text	00000020 printChar
+00001784 g       *ABS*	00000000 __bss_start
+00001224 g     F .text	00000378 main
+00001000 g       *ABS*	00000000 __alt_mem_RAM
+000017a8 g     O .bss	00000004 alt_envp
+000011c4 g     F .text	00000060 setSegmentSelected
+00001764 g       *ABS*	00000000 __flash_rodata_start
+000016e0 g     F .text	00000020 alt_irq_init
+0000179c g     O .bss	00000004 S7_4_PTR
+000017b0 g     O .bss	00000004 alt_argc
+00001020 g       *ABS*	00000000 __ram_exceptions_start
+00001780 g       *ABS*	00000000 _edata
+000017b4 g       *ABS*	00000000 _end
+00001020 g       *ABS*	00000000 __ram_exceptions_end
+000017a0 g     O .bss	00000004 S7_0_PTR
+00002000 g       *ABS*	00000000 __alt_data_end
+0000100c g       .entry	00000000 _exit
+00001748 g     F .text	0000001c strlen
+0000173c g     F .text	00000004 alt_icache_flush_all
+0000159c g     F .text	000000e0 alt_load
+000017a4 g     O .bss	00000004 BTN_PTR
+
+
+
+Disassembly of section .entry:
+
+00001000 <__reset>:
+ * Jump to the _start entry point in the .text section if reset code
+ * is allowed or if optimizing for RTL simulation.
+ */
+#if defined(ALT_ALLOW_CODE_AT_RESET) || defined(ALT_SIM_OPTIMIZE)
+    /* Jump to the _start entry point in the .text section. */
+    movhi r1, %hi(_start)
+    1000:	00400034 	movhi	at,0
+    ori r1, r1, %lo(_start)
+    1004:	08440814 	ori	at,at,4128
+    jmp r1
+    1008:	0800683a 	jmp	at
+
+0000100c <_exit>:
+	...
+
+Disassembly of section .text:
+
+00001020 <_start>:
+
+    /*
+     * Now that the caches are initialized, set up the stack pointer and global pointer.
+     * The values provided by the linker are assumed to be correctly aligned.
+     */
+    movhi sp, %hi(__alt_stack_pointer)
+    1020:	06c00034 	movhi	sp,0
+    ori sp, sp, %lo(__alt_stack_pointer)
+    1024:	dec80014 	ori	sp,sp,8192
+    movhi gp, %hi(_gp)
+    1028:	06800034 	movhi	gp,0
+    ori gp, gp, %lo(_gp)
+    102c:	d6a5df14 	ori	gp,gp,38780
+ */
+#ifndef ALT_SIM_OPTIMIZE
+    /* Log that the BSS is about to be cleared. */
+    ALT_LOG_PUTS(alt_log_msg_bss)
+
+    movhi r2, %hi(__bss_start)
+    1030:	00800034 	movhi	r2,0
+    ori r2, r2, %lo(__bss_start)
+    1034:	1085e114 	ori	r2,r2,6020
+
+    movhi r3, %hi(__bss_end)
+    1038:	00c00034 	movhi	r3,0
+    ori r3, r3, %lo(__bss_end)
+    103c:	18c5ed14 	ori	r3,r3,6068
+
+    beq r2, r3, 1f
+    1040:	10c00326 	beq	r2,r3,1050 <_start+0x30>
+
+0:
+    stw zero, (r2)
+    1044:	10000015 	stw	zero,0(r2)
+    addi r2, r2, 4
+    1048:	10800104 	addi	r2,r2,4
+    bltu r2, r3, 0b
+    104c:	10fffd36 	bltu	r2,r3,1044 <_gp+0xffff78c8>
+     * section aren't defined until alt_load() has been called).
+     */
+    mov   et, zero
+#endif
+
+    call alt_load
+    1050:	000159c0 	call	159c <alt_load>
+
+    /* Log that alt_main is about to be called. */
+    ALT_LOG_PUTS(alt_log_msg_alt_main)
+
+    /* Call the C entry point. It should never return. */
+    call alt_main
+    1054:	000167c0 	call	167c <alt_main>
+
+00001058 <alt_after_alt_main>:
+
+    /* Wait in infinite loop in case alt_main does return. */
+alt_after_alt_main:
+    br alt_after_alt_main
+    1058:	003fff06 	br	1058 <_gp+0xffff78dc>
+
+0000105c <printChar>:
+volatile unsigned char* S7_2_PTR;
+volatile unsigned char* S7_3_PTR;
+volatile unsigned char* S7_4_PTR;
+
+void printChar(volatile unsigned char * pS7_ptr, int num){
+	if(num==0){
+    105c:	2800021e 	bne	r5,zero,1068 <printChar+0xc>
+		*pS7_ptr=0x8;
+    1060:	00800204 	movi	r2,8
+    1064:	00000306 	br	1074 <printChar+0x18>
+	}
+	else if(num==1){
+    1068:	00800044 	movi	r2,1
+    106c:	2880021e 	bne	r5,r2,1078 <printChar+0x1c>
+		*pS7_ptr=0xC;
+    1070:	00800304 	movi	r2,12
+    1074:	20800005 	stb	r2,0(r4)
+    1078:	f800283a 	ret
+
+0000107c <printNum>:
+	}
+}
+
+void printNum(volatile unsigned char * pS7_ptr, int num){
+	if(num==0){
+    107c:	2800021e 	bne	r5,zero,1088 <printNum+0xc>
+		*pS7_ptr=0x40;
+    1080:	00801004 	movi	r2,64
+    1084:	00002306 	br	1114 <printNum+0x98>
+	}
+	else if(num==1){
+    1088:	00800044 	movi	r2,1
+    108c:	2880021e 	bne	r5,r2,1098 <printNum+0x1c>
+		*pS7_ptr=0x79;
+    1090:	00801e44 	movi	r2,121
+    1094:	00001f06 	br	1114 <printNum+0x98>
+	}
+	else if(num==2){
+    1098:	00800084 	movi	r2,2
+    109c:	2880021e 	bne	r5,r2,10a8 <printNum+0x2c>
+		*pS7_ptr=0x24;
+    10a0:	00800904 	movi	r2,36
+    10a4:	00001b06 	br	1114 <printNum+0x98>
+	}
+	else if(num==3){
+    10a8:	008000c4 	movi	r2,3
+    10ac:	2880021e 	bne	r5,r2,10b8 <printNum+0x3c>
+		*pS7_ptr=0xB0;
+    10b0:	00bfec04 	movi	r2,-80
+    10b4:	00001706 	br	1114 <printNum+0x98>
+	}
+	else if(num==4){
+    10b8:	00800104 	movi	r2,4
+    10bc:	2880021e 	bne	r5,r2,10c8 <printNum+0x4c>
+		*pS7_ptr=0x99;
+    10c0:	00bfe644 	movi	r2,-103
+    10c4:	00001306 	br	1114 <printNum+0x98>
+	}
+	else if(num==5){
+    10c8:	00800144 	movi	r2,5
+    10cc:	2880021e 	bne	r5,r2,10d8 <printNum+0x5c>
+		*pS7_ptr=0x12;
+    10d0:	00800484 	movi	r2,18
+    10d4:	00000f06 	br	1114 <printNum+0x98>
+	}
+	else if(num==6){
+    10d8:	00800184 	movi	r2,6
+    10dc:	2880021e 	bne	r5,r2,10e8 <printNum+0x6c>
+		*pS7_ptr=0x82;
+    10e0:	00bfe084 	movi	r2,-126
+    10e4:	00000b06 	br	1114 <printNum+0x98>
+	}
+	else if(num==7){
+    10e8:	008001c4 	movi	r2,7
+    10ec:	2880021e 	bne	r5,r2,10f8 <printNum+0x7c>
+		*pS7_ptr=0xF8;
+    10f0:	00bffe04 	movi	r2,-8
+    10f4:	00000706 	br	1114 <printNum+0x98>
+	}
+	else if(num==8){
+    10f8:	00800204 	movi	r2,8
+    10fc:	2880021e 	bne	r5,r2,1108 <printNum+0x8c>
+		*pS7_ptr=0x80;
+    1100:	00bfe004 	movi	r2,-128
+    1104:	00000306 	br	1114 <printNum+0x98>
+	}
+	else if(num==9){
+    1108:	00800244 	movi	r2,9
+    110c:	2880021e 	bne	r5,r2,1118 <printNum+0x9c>
+		*pS7_ptr=0x10;
+    1110:	00800404 	movi	r2,16
+    1114:	20800005 	stb	r2,0(r4)
+    1118:	f800283a 	ret
+
+0000111c <setNum>:
+}
+
+
+void setNum(volatile unsigned char * pS7_ptr,const char * input){
+	int number;
+    switch(*input){
+    111c:	28800003 	ldbu	r2,0(r5)
+    1120:	00c00244 	movi	r3,9
+    1124:	10bff404 	addi	r2,r2,-48
+    1128:	10803fcc 	andi	r2,r2,255
+    112c:	18802436 	bltu	r3,r2,11c0 <setNum+0xa4>
+    1130:	100490ba 	slli	r2,r2,2
+    1134:	00c00034 	movhi	r3,0
+    1138:	18c45204 	addi	r3,r3,4424
+    113c:	10c5883a 	add	r2,r2,r3
+    1140:	10800017 	ldw	r2,0(r2)
+    1144:	1000683a 	jmp	r2
+    1148:	00001170 	cmpltui	zero,zero,69
+    114c:	00001178 	rdprs	zero,zero,69
+    1150:	00001180 	call	118 <__alt_mem_RAM-0xee8>
+    1154:	00001188 	cmpgei	zero,zero,70
+    1158:	00001190 	cmplti	zero,zero,70
+    115c:	00001198 	cmpnei	zero,zero,70
+    1160:	000011a0 	cmpeqi	zero,zero,70
+    1164:	000011a8 	cmpgeui	zero,zero,70
+    1168:	000011b0 	cmpltui	zero,zero,70
+    116c:	000011b8 	rdprs	zero,zero,70
+	}
+}
+
+void printNum(volatile unsigned char * pS7_ptr, int num){
+	if(num==0){
+		*pS7_ptr=0x40;
+    1170:	00801004 	movi	r2,64
+    1174:	00001106 	br	11bc <setNum+0xa0>
+	}
+	else if(num==1){
+		*pS7_ptr=0x79;
+    1178:	00801e44 	movi	r2,121
+    117c:	00000f06 	br	11bc <setNum+0xa0>
+	}
+	else if(num==2){
+		*pS7_ptr=0x24;
+    1180:	00800904 	movi	r2,36
+    1184:	00000d06 	br	11bc <setNum+0xa0>
+	}
+	else if(num==3){
+		*pS7_ptr=0xB0;
+    1188:	00bfec04 	movi	r2,-80
+    118c:	00000b06 	br	11bc <setNum+0xa0>
+	}
+	else if(num==4){
+		*pS7_ptr=0x99;
+    1190:	00bfe644 	movi	r2,-103
+    1194:	00000906 	br	11bc <setNum+0xa0>
+	}
+	else if(num==5){
+		*pS7_ptr=0x12;
+    1198:	00800484 	movi	r2,18
+    119c:	00000706 	br	11bc <setNum+0xa0>
+	}
+	else if(num==6){
+		*pS7_ptr=0x82;
+    11a0:	00bfe084 	movi	r2,-126
+    11a4:	00000506 	br	11bc <setNum+0xa0>
+	}
+	else if(num==7){
+		*pS7_ptr=0xF8;
+    11a8:	00bffe04 	movi	r2,-8
+    11ac:	00000306 	br	11bc <setNum+0xa0>
+	}
+	else if(num==8){
+		*pS7_ptr=0x80;
+    11b0:	00bfe004 	movi	r2,-128
+    11b4:	00000106 	br	11bc <setNum+0xa0>
+	}
+	else if(num==9){
+		*pS7_ptr=0x10;
+    11b8:	00800404 	movi	r2,16
+    11bc:	20800005 	stb	r2,0(r4)
+    11c0:	f800283a 	ret
+
+000011c4 <setSegmentSelected>:
+  	  break;
+    }
+}
+int setSegmentSelected(int segmentSelected,const char * input){
+
+    switch(*input){
+    11c4:	28c00007 	ldb	r3,0(r5)
+  	  number=9;
+  	  printNum(pS7_ptr, number);
+  	  break;
+    }
+}
+int setSegmentSelected(int segmentSelected,const char * input){
+    11c8:	2005883a 	mov	r2,r4
+
+    switch(*input){
+    11cc:	01001584 	movi	r4,86
+    11d0:	19001026 	beq	r3,r4,1214 <setSegmentSelected+0x50>
+    11d4:	20c00516 	blt	r4,r3,11ec <setSegmentSelected+0x28>
+    11d8:	01001084 	movi	r4,66
+    11dc:	19000f26 	beq	r3,r4,121c <setSegmentSelected+0x58>
+    11e0:	010010c4 	movi	r4,67
+    11e4:	19000926 	beq	r3,r4,120c <setSegmentSelected+0x48>
+    11e8:	f800283a 	ret
+    11ec:	01001604 	movi	r4,88
+    11f0:	19000426 	beq	r3,r4,1204 <setSegmentSelected+0x40>
+    11f4:	01001684 	movi	r4,90
+    11f8:	1900091e 	bne	r3,r4,1220 <setSegmentSelected+0x5c>
+    case 'Z':
+  	  //7 segmento hora 1
+  	  segmentSelected=5;
+    11fc:	00800144 	movi	r2,5
+    1200:	f800283a 	ret
+  	  break;
+    case 'X':
+  	  //7 segmento hora 2
+  	  segmentSelected=4;
+    1204:	00800104 	movi	r2,4
+  	  break;
+    1208:	f800283a 	ret
+    case 'C':
+  	  //7 segmento min 1
+  	  segmentSelected=3;
+    120c:	008000c4 	movi	r2,3
+  	  break;
+    1210:	f800283a 	ret
+    case 'V':
+  	  //7 segmento min 2
+  	  segmentSelected=2;
+    1214:	00800084 	movi	r2,2
+  	  break;
+    1218:	f800283a 	ret
+    case 'B':
+  	  //7 segmento tiempo AM/PM
+  	  segmentSelected=1;
+    121c:	00800044 	movi	r2,1
+    }
+
+	return segmentSelected;
+
+
+}
+    1220:	f800283a 	ret
+
+00001224 <main>:
+
+int main()
+{ 
+  alt_putstr("Hello from Nios II!\n");
+    1224:	01000034 	movhi	r4,0
+
+
+}
+
+int main()
+{ 
+    1228:	defff604 	addi	sp,sp,-40
+  alt_putstr("Hello from Nios II!\n");
+    122c:	2105d904 	addi	r4,r4,5988
+
+
+}
+
+int main()
+{ 
+    1230:	ddc00815 	stw	r23,32(sp)
+    1234:	dd800715 	stw	r22,28(sp)
+    1238:	dd400615 	stw	r21,24(sp)
+    123c:	dd000515 	stw	r20,20(sp)
+    1240:	dcc00415 	stw	r19,16(sp)
+    1244:	dc800315 	stw	r18,12(sp)
+    1248:	dc400215 	stw	r17,8(sp)
+    124c:	dc000115 	stw	r16,4(sp)
+    1250:	dfc00915 	stw	ra,36(sp)
+  alt_putstr("Hello from Nios II!\n");
+    1254:	00016a80 	call	16a8 <alt_putstr>
+
+  LED_PTR= (unsigned char*)0x3070;
+    1258:	008c1c04 	movi	r2,12400
+    125c:	d0a00415 	stw	r2,-32752(gp)
+  SW_PTR= (unsigned char*)0x3060;
+    1260:	008c1804 	movi	r2,12384
+    1264:	d0a00615 	stw	r2,-32744(gp)
+  UART_PTR=(unsigned char*)0x3080;
+    1268:	008c2004 	movi	r2,12416
+    126c:	d0a00315 	stw	r2,-32756(gp)
+  BTN_PTR= (unsigned char*)0x3050;
+    1270:	008c1404 	movi	r2,12368
+    1274:	d0a00a15 	stw	r2,-32728(gp)
+  S7_0_PTR= (unsigned char*)0x3040;
+    1278:	008c1004 	movi	r2,12352
+    127c:	d0a00915 	stw	r2,-32732(gp)
+  S7_1_PTR= (unsigned char*)0x3030;
+    1280:	008c0c04 	movi	r2,12336
+    1284:	d0a00715 	stw	r2,-32740(gp)
+  S7_2_PTR= (unsigned char*)0x3020;
+    1288:	008c0804 	movi	r2,12320
+    128c:	d0a00515 	stw	r2,-32748(gp)
+  S7_3_PTR= (unsigned char*)0x3010;
+    1290:	008c0404 	movi	r2,12304
+    1294:	d0a00215 	stw	r2,-32760(gp)
+  /* Event loop never exits. */
+
+  unsigned c;
+  int flagSetHour = 0;
+  int flagSetAlarm = 0;
+  int segmentSelected=1;
+    1298:	04c00044 	movi	r19,1
+  BTN_PTR= (unsigned char*)0x3050;
+  S7_0_PTR= (unsigned char*)0x3040;
+  S7_1_PTR= (unsigned char*)0x3030;
+  S7_2_PTR= (unsigned char*)0x3020;
+  S7_3_PTR= (unsigned char*)0x3010;
+  S7_4_PTR= (unsigned char*)0x3000;
+    129c:	008c0004 	movi	r2,12288
+    		  segmentSelected=segmentSelected+1;
+    		  if(segmentSelected > 5){
+    			  segmentSelected = 1;
+    		  }
+    	  }
+          switch(segmentSelected){
+    12a0:	05c00034 	movhi	r23,0
+  BTN_PTR= (unsigned char*)0x3050;
+  S7_0_PTR= (unsigned char*)0x3040;
+  S7_1_PTR= (unsigned char*)0x3030;
+  S7_2_PTR= (unsigned char*)0x3020;
+  S7_3_PTR= (unsigned char*)0x3010;
+  S7_4_PTR= (unsigned char*)0x3000;
+    12a4:	d0a00815 	stw	r2,-32736(gp)
+
+  unsigned c;
+  int flagSetHour = 0;
+  int flagSetAlarm = 0;
+  int segmentSelected=1;
+  int fpgaEnable = 0;
+    12a8:	0029883a 	mov	r20,zero
+  S7_4_PTR= (unsigned char*)0x3000;
+  /* Event loop never exits. */
+
+  unsigned c;
+  int flagSetHour = 0;
+  int flagSetAlarm = 0;
+    12ac:	0023883a 	mov	r17,zero
+  S7_3_PTR= (unsigned char*)0x3010;
+  S7_4_PTR= (unsigned char*)0x3000;
+  /* Event loop never exits. */
+
+  unsigned c;
+  int flagSetHour = 0;
+    12b0:	0021883a 	mov	r16,zero
+    	  flagSetAlarm=0;
+    	  *LED_PTR = 0x7; //para demostrar con los leds que esta estableciendo la hora
+
+      }
+      else if ((*SW_PTR & 0x80) == 0x0){
+		  if(flagSetHour==1){
+    12b4:	9825883a 	mov	r18,r19
+      //habilitar y setear hora desde el switch
+      if((*SW_PTR & 0x80) == 0x80){
+    	  fpgaEnable=1;
+    	  flagSetHour=1;
+    	  flagSetAlarm=0;
+    	  *LED_PTR = 0x7; //para demostrar con los leds que esta estableciendo la hora
+    12b8:	054001c4 	movi	r21,7
+      //habilitar y setear hora desde la alarma
+      if((*SW_PTR & 0x40)  == 0x40){
+    	  fpgaEnable=1;
+    	  flagSetHour=0;
+    	  flagSetAlarm=1;
+    	  *LED_PTR = 0x5; //para demostras con los leds que esta estableciendo la alarma
+    12bc:	05800144 	movi	r22,5
+    		  segmentSelected=segmentSelected+1;
+    		  if(segmentSelected > 5){
+    			  segmentSelected = 1;
+    		  }
+    	  }
+          switch(segmentSelected){
+    12c0:	bdc50b04 	addi	r23,r23,5164
+  int segmentSelected=1;
+  int fpgaEnable = 0;
+
+
+    while (1) {
+      c = *UART_PTR;
+    12c4:	d0a00317 	ldw	r2,-32756(gp)
+      unsigned temp = c & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK;
+      const char * input = (char *)&temp;
+
+      //habilitar y setear hora desde el switch
+      if((*SW_PTR & 0x80) == 0x80){
+    12c8:	d0e00617 	ldw	r3,-32744(gp)
+  int segmentSelected=1;
+  int fpgaEnable = 0;
+
+
+    while (1) {
+      c = *UART_PTR;
+    12cc:	10800003 	ldbu	r2,0(r2)
+      unsigned temp = c & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK;
+    12d0:	10803fcc 	andi	r2,r2,255
+    12d4:	d8800015 	stw	r2,0(sp)
+      const char * input = (char *)&temp;
+
+      //habilitar y setear hora desde el switch
+      if((*SW_PTR & 0x80) == 0x80){
+    12d8:	18800003 	ldbu	r2,0(r3)
+    12dc:	10803fcc 	andi	r2,r2,255
+    12e0:	1080201c 	xori	r2,r2,128
+    12e4:	10bfe004 	addi	r2,r2,-128
+    12e8:	1000060e 	bge	r2,zero,1304 <main+0xe0>
+    	  fpgaEnable=1;
+    	  flagSetHour=1;
+    	  flagSetAlarm=0;
+    	  *LED_PTR = 0x7; //para demostrar con los leds que esta estableciendo la hora
+    12ec:	d0a00417 	ldw	r2,-32752(gp)
+      unsigned temp = c & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK;
+      const char * input = (char *)&temp;
+
+      //habilitar y setear hora desde el switch
+      if((*SW_PTR & 0x80) == 0x80){
+    	  fpgaEnable=1;
+    12f0:	05000044 	movi	r20,1
+    	  flagSetHour=1;
+    	  flagSetAlarm=0;
+    12f4:	0023883a 	mov	r17,zero
+    	  *LED_PTR = 0x7; //para demostrar con los leds que esta estableciendo la hora
+    12f8:	15400005 	stb	r21,0(r2)
+      const char * input = (char *)&temp;
+
+      //habilitar y setear hora desde el switch
+      if((*SW_PTR & 0x80) == 0x80){
+    	  fpgaEnable=1;
+    	  flagSetHour=1;
+    12fc:	a021883a 	mov	r16,r20
+    1300:	00000b06 	br	1330 <main+0x10c>
+    	  flagSetAlarm=0;
+    	  *LED_PTR = 0x7; //para demostrar con los leds que esta estableciendo la hora
+
+      }
+      else if ((*SW_PTR & 0x80) == 0x0){
+    1304:	18800003 	ldbu	r2,0(r3)
+    1308:	10803fcc 	andi	r2,r2,255
+    130c:	1080201c 	xori	r2,r2,128
+    1310:	10bfe004 	addi	r2,r2,-128
+    1314:	10000616 	blt	r2,zero,1330 <main+0x10c>
+		  if(flagSetHour==1){
+    1318:	8480041e 	bne	r16,r18,132c <main+0x108>
+			  fpgaEnable=0;
+			  *LED_PTR = 0x0;
+    131c:	d0a00417 	ldw	r2,-32752(gp)
+    	  *LED_PTR = 0x7; //para demostrar con los leds que esta estableciendo la hora
+
+      }
+      else if ((*SW_PTR & 0x80) == 0x0){
+		  if(flagSetHour==1){
+			  fpgaEnable=0;
+    1320:	0029883a 	mov	r20,zero
+			  *LED_PTR = 0x0;
+			  flagSetHour=0;
+			  segmentSelected=1;
+    1324:	8027883a 	mov	r19,r16
+
+      }
+      else if ((*SW_PTR & 0x80) == 0x0){
+		  if(flagSetHour==1){
+			  fpgaEnable=0;
+			  *LED_PTR = 0x0;
+    1328:	10000005 	stb	zero,0(r2)
+    132c:	0021883a 	mov	r16,zero
+			  segmentSelected=1;
+		  }
+      }
+
+      //habilitar y setear hora desde la alarma
+      if((*SW_PTR & 0x40)  == 0x40){
+    1330:	d0e00617 	ldw	r3,-32744(gp)
+    1334:	18800003 	ldbu	r2,0(r3)
+    1338:	1080100c 	andi	r2,r2,64
+    133c:	10000626 	beq	r2,zero,1358 <main+0x134>
+    	  fpgaEnable=1;
+    	  flagSetHour=0;
+    	  flagSetAlarm=1;
+    	  *LED_PTR = 0x5; //para demostras con los leds que esta estableciendo la alarma
+    1340:	d0a00417 	ldw	r2,-32752(gp)
+		  }
+      }
+
+      //habilitar y setear hora desde la alarma
+      if((*SW_PTR & 0x40)  == 0x40){
+    	  fpgaEnable=1;
+    1344:	05000044 	movi	r20,1
+    	  flagSetHour=0;
+    	  flagSetAlarm=1;
+    1348:	a023883a 	mov	r17,r20
+    	  *LED_PTR = 0x5; //para demostras con los leds que esta estableciendo la alarma
+    134c:	15800005 	stb	r22,0(r2)
+      }
+
+      //habilitar y setear hora desde la alarma
+      if((*SW_PTR & 0x40)  == 0x40){
+    	  fpgaEnable=1;
+    	  flagSetHour=0;
+    1350:	0021883a 	mov	r16,zero
+    1354:	00000906 	br	137c <main+0x158>
+    	  flagSetAlarm=1;
+    	  *LED_PTR = 0x5; //para demostras con los leds que esta estableciendo la alarma
+      }
+      else if((*SW_PTR & 0x40)  == 0x0){
+    1358:	18800003 	ldbu	r2,0(r3)
+    135c:	1080100c 	andi	r2,r2,64
+    1360:	1000061e 	bne	r2,zero,137c <main+0x158>
+    	  if (flagSetAlarm==1){
+    1364:	8c80051e 	bne	r17,r18,137c <main+0x158>
+    		  fpgaEnable=0;
+			  *LED_PTR = 0x0;
+    1368:	d0a00417 	ldw	r2,-32752(gp)
+			  flagSetAlarm=0;
+			  segmentSelected=1;
+    136c:	8827883a 	mov	r19,r17
+    	  flagSetAlarm=1;
+    	  *LED_PTR = 0x5; //para demostras con los leds que esta estableciendo la alarma
+      }
+      else if((*SW_PTR & 0x40)  == 0x0){
+    	  if (flagSetAlarm==1){
+    		  fpgaEnable=0;
+    1370:	0029883a 	mov	r20,zero
+			  *LED_PTR = 0x0;
+    1374:	10000005 	stb	zero,0(r2)
+			  flagSetAlarm=0;
+    1378:	0023883a 	mov	r17,zero
+			  segmentSelected=1;
+    	  }
+      }
+
+      switch(*input){
+    137c:	d8800007 	ldb	r2,0(sp)
+    1380:	00c01444 	movi	r3,81
+    1384:	10c00326 	beq	r2,r3,1394 <main+0x170>
+    1388:	00c015c4 	movi	r3,87
+    138c:	10c00526 	beq	r2,r3,13a4 <main+0x180>
+    1390:	00000806 	br	13b4 <main+0x190>
+      case 'Q':
+    	  //habilitar y setear hora desde el teclado
+    	  if(flagSetHour){
+    1394:	80000a26 	beq	r16,zero,13c0 <main+0x19c>
+    		  *LED_PTR = 0x7;
+    1398:	d0a00417 	ldw	r2,-32752(gp)
+    139c:	15400005 	stb	r21,0(r2)
+    13a0:	00007a06 	br	158c <main+0x368>
+
+    	  flagSetAlarm=0;
+    	  break;
+      case 'W':
+    	  //habilitar y setear alarma desde el teclado
+    	  if(flagSetAlarm){
+    13a4:	88000926 	beq	r17,zero,13cc <main+0x1a8>
+    		  *LED_PTR = 0x5;
+    13a8:	d0a00417 	ldw	r2,-32752(gp)
+    13ac:	15800005 	stb	r22,0(r2)
+    13b0:	00007606 	br	158c <main+0x368>
+    		  flagSetAlarm=1;
+    	  }
+    	  flagSetHour=0;
+    	  break;
+      }
+      if(flagSetAlarm || flagSetHour){
+    13b4:	8800071e 	bne	r17,zero,13d4 <main+0x1b0>
+    13b8:	8000021e 	bne	r16,zero,13c4 <main+0x1a0>
+    13bc:	003fc106 	br	12c4 <_gp+0xffff7b48>
+    13c0:	0023883a 	mov	r17,zero
+    		  *LED_PTR = 0x7;
+    		  flagSetHour=0;
+    		  segmentSelected=1;
+    	  }
+    	  else{
+    		  flagSetHour=1;
+    13c4:	04000044 	movi	r16,1
+    13c8:	00000206 	br	13d4 <main+0x1b0>
+    		  *LED_PTR = 0x5;
+    		  flagSetAlarm=0;
+    		  segmentSelected=1;
+    	  }
+    	  else{
+    		  flagSetAlarm=1;
+    13cc:	04400044 	movi	r17,1
+    	  }
+    	  flagSetHour=0;
+    13d0:	0021883a 	mov	r16,zero
+    	  break;
+      }
+      if(flagSetAlarm || flagSetHour){
+    	  //seleccionar 7 segmento
+    	  segmentSelected = setSegmentSelected(segmentSelected,input);
+    13d4:	9809883a 	mov	r4,r19
+    13d8:	d80b883a 	mov	r5,sp
+    13dc:	00011c40 	call	11c4 <setSegmentSelected>
+    13e0:	1027883a 	mov	r19,r2
+
+    	  //verficar cual 7 segmento cambiar
+    	  if(*BTN_PTR == 0x1){
+    13e4:	d0a00a17 	ldw	r2,-32728(gp)
+    13e8:	10800003 	ldbu	r2,0(r2)
+    13ec:	10803fcc 	andi	r2,r2,255
+    13f0:	1480071e 	bne	r2,r18,1410 <main+0x1ec>
+    13f4:	008003f4 	movhi	r2,15
+    13f8:	10909004 	addi	r2,r2,16960
+    13fc:	10bfffc4 	addi	r2,r2,-1
+    		  //DELAY
+    		  int delay = 0;
+    		  while(delay < 1000000)
+    1400:	103ffe1e 	bne	r2,zero,13fc <_gp+0xffff7c80>
+    		  {
+    			  delay++;
+    		  }
+    		  //Aumenta el contador del selector de 7 segmento
+    		  segmentSelected=segmentSelected+1;
+    1404:	9cc00044 	addi	r19,r19,1
+    		  if(segmentSelected > 5){
+    1408:	00800144 	movi	r2,5
+    140c:	14c04e16 	blt	r2,r19,1548 <main+0x324>
+    			  segmentSelected = 1;
+    		  }
+    	  }
+          switch(segmentSelected){
+    1410:	98bfffc4 	addi	r2,r19,-1
+    1414:	00c00104 	movi	r3,4
+    1418:	18bfaa36 	bltu	r3,r2,12c4 <_gp+0xffff7b48>
+    141c:	100490ba 	slli	r2,r2,2
+    1420:	15c5883a 	add	r2,r2,r23
+    1424:	10800017 	ldw	r2,0(r2)
+    1428:	1000683a 	jmp	r2
+    142c:	00001548 	cmpgei	zero,zero,85
+    1430:	00001504 	movi	zero,84
+    1434:	000014c4 	movi	zero,83
+    1438:	00001484 	movi	zero,82
+    143c:	00001440 	call	144 <__alt_mem_RAM-0xebc>
+          case 5:
+        	  //7 segmento hora 1
+        	  if(flagSetAlarm==1){
+    1440:	8c80021e 	bne	r17,r18,144c <main+0x228>
+        		  *LED_PTR = 0xD;
+    1444:	00c00344 	movi	r3,13
+    1448:	00000206 	br	1454 <main+0x230>
+        	  }
+        	  else if(flagSetHour==1){
+    144c:	8480031e 	bne	r16,r18,145c <main+0x238>
+				  *LED_PTR = 0xF;
+    1450:	00c003c4 	movi	r3,15
+    1454:	d0a00417 	ldw	r2,-32752(gp)
+    1458:	10c00005 	stb	r3,0(r2)
+			  }
+        	  setNum(S7_4_PTR,input);
+    145c:	d1200817 	ldw	r4,-32736(gp)
+    1460:	d80b883a 	mov	r5,sp
+    1464:	000111c0 	call	111c <setNum>
+        	  if(fpgaEnable){
+    1468:	a03f9626 	beq	r20,zero,12c4 <_gp+0xffff7b48>
+        		  printChar(S7_4_PTR, *SW_PTR & 0x0F);
+    146c:	d0a00617 	ldw	r2,-32744(gp)
+    1470:	d1200817 	ldw	r4,-32736(gp)
+    1474:	11400003 	ldbu	r5,0(r2)
+    1478:	294003cc 	andi	r5,r5,15
+    147c:	000105c0 	call	105c <printChar>
+    1480:	003f9006 	br	12c4 <_gp+0xffff7b48>
+        	  }
+        	  break;
+          case 4:
+        	  //7 segmento hora 2
+        	  if(flagSetAlarm==1){
+    1484:	8c80021e 	bne	r17,r18,1490 <main+0x26c>
+				  *LED_PTR = 0x15;
+    1488:	00c00544 	movi	r3,21
+    148c:	00000206 	br	1498 <main+0x274>
+			  }
+			  else if(flagSetHour==1){
+    1490:	8480031e 	bne	r16,r18,14a0 <main+0x27c>
+				  *LED_PTR = 0x17;
+    1494:	00c005c4 	movi	r3,23
+    1498:	d0a00417 	ldw	r2,-32752(gp)
+    149c:	10c00005 	stb	r3,0(r2)
+			  }
+        	  setNum(S7_3_PTR,input);
+    14a0:	d1200217 	ldw	r4,-32760(gp)
+    14a4:	d80b883a 	mov	r5,sp
+    14a8:	000111c0 	call	111c <setNum>
+        	  if(fpgaEnable){
+    14ac:	a03f8526 	beq	r20,zero,12c4 <_gp+0xffff7b48>
+        		  printNum(S7_3_PTR, *SW_PTR & 0x0F);
+    14b0:	d0a00617 	ldw	r2,-32744(gp)
+    14b4:	d1200217 	ldw	r4,-32760(gp)
+    14b8:	11400003 	ldbu	r5,0(r2)
+    14bc:	294003cc 	andi	r5,r5,15
+    14c0:	00001f06 	br	1540 <main+0x31c>
+        	  }
+        	  break;
+          case 3:
+        	  //7 segmento min 1
+        	  if(flagSetAlarm==1){
+    14c4:	8c80021e 	bne	r17,r18,14d0 <main+0x2ac>
+				  *LED_PTR = 0x25;
+    14c8:	00c00944 	movi	r3,37
+    14cc:	00000206 	br	14d8 <main+0x2b4>
+			  }
+			  else if(flagSetHour==1){
+    14d0:	8480031e 	bne	r16,r18,14e0 <main+0x2bc>
+				  *LED_PTR = 0x27;
+    14d4:	00c009c4 	movi	r3,39
+    14d8:	d0a00417 	ldw	r2,-32752(gp)
+    14dc:	10c00005 	stb	r3,0(r2)
+			  }
+        	  setNum(S7_2_PTR,input);
+    14e0:	d1200517 	ldw	r4,-32748(gp)
+    14e4:	d80b883a 	mov	r5,sp
+    14e8:	000111c0 	call	111c <setNum>
+        	  if(fpgaEnable){
+    14ec:	a03f7526 	beq	r20,zero,12c4 <_gp+0xffff7b48>
+        		  printNum(S7_2_PTR, *SW_PTR & 0x0F);
+    14f0:	d0a00617 	ldw	r2,-32744(gp)
+    14f4:	d1200517 	ldw	r4,-32748(gp)
+    14f8:	11400003 	ldbu	r5,0(r2)
+    14fc:	294003cc 	andi	r5,r5,15
+    1500:	00000f06 	br	1540 <main+0x31c>
+        	  }
+        	  break;
+          case 2:
+        	  //7 segmento min 2
+        	  if(flagSetAlarm==1){
+    1504:	8c80021e 	bne	r17,r18,1510 <main+0x2ec>
+				  *LED_PTR = 0x45;
+    1508:	00c01144 	movi	r3,69
+    150c:	00000206 	br	1518 <main+0x2f4>
+			  }
+			  else if(flagSetHour==1){
+    1510:	8480031e 	bne	r16,r18,1520 <main+0x2fc>
+				  *LED_PTR = 0x47;
+    1514:	00c011c4 	movi	r3,71
+    1518:	d0a00417 	ldw	r2,-32752(gp)
+    151c:	10c00005 	stb	r3,0(r2)
+			  }
+        	  setNum(S7_1_PTR,input);
+    1520:	d1200717 	ldw	r4,-32740(gp)
+    1524:	d80b883a 	mov	r5,sp
+    1528:	000111c0 	call	111c <setNum>
+        	  if(fpgaEnable){
+    152c:	a03f6526 	beq	r20,zero,12c4 <_gp+0xffff7b48>
+        		  printNum(S7_1_PTR, *SW_PTR & 0x0F);
+    1530:	d0a00617 	ldw	r2,-32744(gp)
+    1534:	d1200717 	ldw	r4,-32740(gp)
+    1538:	11400003 	ldbu	r5,0(r2)
+    153c:	294003cc 	andi	r5,r5,15
+    1540:	000107c0 	call	107c <printNum>
+    1544:	003f5f06 	br	12c4 <_gp+0xffff7b48>
+        	  }
+        	  break;
+          case 1:
+        	  //7 segmento tiempo AM/PM
+        	  if(flagSetAlarm==1){
+    1548:	8c80021e 	bne	r17,r18,1554 <main+0x330>
+				  *LED_PTR = 0x85;
+    154c:	00ffe144 	movi	r3,-123
+    1550:	00000206 	br	155c <main+0x338>
+			  }
+			  else if(flagSetHour==1){
+    1554:	8480031e 	bne	r16,r18,1564 <main+0x340>
+				  *LED_PTR = 0x87;
+    1558:	00ffe1c4 	movi	r3,-121
+    155c:	d0a00417 	ldw	r2,-32752(gp)
+    1560:	10c00005 	stb	r3,0(r2)
+			  }
+        	  setNum(S7_0_PTR,input);
+    1564:	d1200917 	ldw	r4,-32732(gp)
+    1568:	d80b883a 	mov	r5,sp
+    156c:	000111c0 	call	111c <setNum>
+        	  if(fpgaEnable){
+    1570:	a0000826 	beq	r20,zero,1594 <main+0x370>
+        		  printNum(S7_0_PTR, *SW_PTR & 0x0F);
+    1574:	d0a00617 	ldw	r2,-32744(gp)
+    1578:	d1200917 	ldw	r4,-32732(gp)
+    157c:	11400003 	ldbu	r5,0(r2)
+    1580:	294003cc 	andi	r5,r5,15
+    1584:	000107c0 	call	107c <printNum>
+    1588:	00000206 	br	1594 <main+0x370>
+    158c:	0023883a 	mov	r17,zero
+    1590:	0021883a 	mov	r16,zero
+    1594:	04c00044 	movi	r19,1
+        	  }
+        	  break;
+          }
+      }
+    }
+    1598:	003f4a06 	br	12c4 <_gp+0xffff7b48>
+
+0000159c <alt_load>:
+ * there is no bootloader, so this application is responsible for loading to
+ * RAM any sections that are required.
+ */  
+
+void alt_load (void)
+{
+    159c:	deffff04 	addi	sp,sp,-4
+    15a0:	01000034 	movhi	r4,0
+    15a4:	01400034 	movhi	r5,0
+    15a8:	dfc00015 	stw	ra,0(sp)
+    15ac:	2105df04 	addi	r4,r4,6012
+    15b0:	2945e004 	addi	r5,r5,6016
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+    15b4:	2140061e 	bne	r4,r5,15d0 <alt_load+0x34>
+    15b8:	01000034 	movhi	r4,0
+    15bc:	01400034 	movhi	r5,0
+    15c0:	21040804 	addi	r4,r4,4128
+    15c4:	29440804 	addi	r5,r5,4128
+    15c8:	2140121e 	bne	r4,r5,1614 <alt_load+0x78>
+    15cc:	00000b06 	br	15fc <alt_load+0x60>
+    15d0:	00c00034 	movhi	r3,0
+    15d4:	18c5e004 	addi	r3,r3,6016
+    15d8:	1907c83a 	sub	r3,r3,r4
+    15dc:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+    15e0:	10fff526 	beq	r2,r3,15b8 <_gp+0xffff7e3c>
+    {
+      *to++ = *from++;
+    15e4:	114f883a 	add	r7,r2,r5
+    15e8:	39c00017 	ldw	r7,0(r7)
+    15ec:	110d883a 	add	r6,r2,r4
+    15f0:	10800104 	addi	r2,r2,4
+    15f4:	31c00015 	stw	r7,0(r6)
+    15f8:	003ff906 	br	15e0 <_gp+0xffff7e64>
+    15fc:	01000034 	movhi	r4,0
+    1600:	01400034 	movhi	r5,0
+    1604:	2105d904 	addi	r4,r4,5988
+    1608:	2945d904 	addi	r5,r5,5988
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+    160c:	2140101e 	bne	r4,r5,1650 <alt_load+0xb4>
+    1610:	00000b06 	br	1640 <alt_load+0xa4>
+    1614:	00c00034 	movhi	r3,0
+    1618:	18c40804 	addi	r3,r3,4128
+    161c:	1907c83a 	sub	r3,r3,r4
+    1620:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+    1624:	10fff526 	beq	r2,r3,15fc <_gp+0xffff7e80>
+    {
+      *to++ = *from++;
+    1628:	114f883a 	add	r7,r2,r5
+    162c:	39c00017 	ldw	r7,0(r7)
+    1630:	110d883a 	add	r6,r2,r4
+    1634:	10800104 	addi	r2,r2,4
+    1638:	31c00015 	stw	r7,0(r6)
+    163c:	003ff906 	br	1624 <_gp+0xffff7ea8>
+  
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+    1640:	00017380 	call	1738 <alt_dcache_flush_all>
+  alt_icache_flush_all();
+}
+    1644:	dfc00017 	ldw	ra,0(sp)
+    1648:	dec00104 	addi	sp,sp,4
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+  alt_icache_flush_all();
+    164c:	000173c1 	jmpi	173c <alt_icache_flush_all>
+    1650:	00c00034 	movhi	r3,0
+    1654:	18c5df04 	addi	r3,r3,6012
+    1658:	1907c83a 	sub	r3,r3,r4
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+    165c:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+    1660:	18bff726 	beq	r3,r2,1640 <_gp+0xffff7ec4>
+    {
+      *to++ = *from++;
+    1664:	114f883a 	add	r7,r2,r5
+    1668:	39c00017 	ldw	r7,0(r7)
+    166c:	110d883a 	add	r6,r2,r4
+    1670:	10800104 	addi	r2,r2,4
+    1674:	31c00015 	stw	r7,0(r6)
+    1678:	003ff906 	br	1660 <_gp+0xffff7ee4>
+
+0000167c <alt_main>:
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+    167c:	deffff04 	addi	sp,sp,-4
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+    1680:	0009883a 	mov	r4,zero
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+    1684:	dfc00015 	stw	ra,0(sp)
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+    1688:	00016e00 	call	16e0 <alt_irq_init>
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
+  ALT_SEM_CREATE (&alt_fd_list_lock, 1);
+
+  /* Initialize the device drivers/software components. */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
+  alt_sys_init();
+    168c:	00017000 	call	1700 <alt_sys_init>
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+    1690:	d1a00b17 	ldw	r6,-32724(gp)
+    1694:	d1600c17 	ldw	r5,-32720(gp)
+    1698:	d1200d17 	ldw	r4,-32716(gp)
+  close(STDOUT_FILENO);
+  exit (result);
+#endif
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
+}
+    169c:	dfc00017 	ldw	ra,0(sp)
+    16a0:	dec00104 	addi	sp,sp,4
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+    16a4:	00012241 	jmpi	1224 <main>
+
+000016a8 <alt_putstr>:
+ * Uses the ALT_DRIVER_WRITE() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided fputs() routine.
+ */
+int 
+alt_putstr(const char* str)
+{
+    16a8:	defffe04 	addi	sp,sp,-8
+    16ac:	dc000015 	stw	r16,0(sp)
+    16b0:	dfc00115 	stw	ra,4(sp)
+    16b4:	2021883a 	mov	r16,r4
+#ifdef ALT_SEMIHOSTING
+    return write(STDOUT_FILENO,str,strlen(str));
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, str, strlen(str), 0);
+    16b8:	00017480 	call	1748 <strlen>
+    16bc:	01000034 	movhi	r4,0
+    16c0:	000f883a 	mov	r7,zero
+    16c4:	100d883a 	mov	r6,r2
+    16c8:	800b883a 	mov	r5,r16
+    16cc:	2105df04 	addi	r4,r4,6012
+#else
+    return fputs(str, stdout);
+#endif
+#endif
+}
+    16d0:	dfc00117 	ldw	ra,4(sp)
+    16d4:	dc000017 	ldw	r16,0(sp)
+    16d8:	dec00204 	addi	sp,sp,8
+#ifdef ALT_SEMIHOSTING
+    return write(STDOUT_FILENO,str,strlen(str));
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, str, strlen(str), 0);
+    16dc:	00017041 	jmpi	1704 <altera_avalon_jtag_uart_write>
+
+000016e0 <alt_irq_init>:
+ * The "base" parameter is ignored and only
+ * present for backwards-compatibility.
+ */
+
+void alt_irq_init ( const void* base )
+{
+    16e0:	deffff04 	addi	sp,sp,-4
+    16e4:	dfc00015 	stw	ra,0(sp)
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( NIOS_CPU, NIOS_CPU);
+    16e8:	00017400 	call	1740 <altera_nios2_gen2_irq_init>
+ * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
+ */
+static ALT_INLINE void ALT_ALWAYS_INLINE 
+       alt_irq_cpu_enable_interrupts (void)
+{
+    NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
+    16ec:	00800044 	movi	r2,1
+    16f0:	1001703a 	wrctl	status,r2
+    alt_irq_cpu_enable_interrupts();
+}
+    16f4:	dfc00017 	ldw	ra,0(sp)
+    16f8:	dec00104 	addi	sp,sp,4
+    16fc:	f800283a 	ret
+
+00001700 <alt_sys_init>:
+ * Initialize the non-interrupt controller devices.
+ * Called after alt_irq_init().
+ */
+
+void alt_sys_init( void )
+{
+    1700:	f800283a 	ret
+
+00001704 <altera_avalon_jtag_uart_write>:
+ */
+
+int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp, 
+  const char * ptr, int count, int flags)
+{
+  unsigned int base = sp->base;
+    1704:	21000017 	ldw	r4,0(r4)
+ * one FIFOs worth of data.  But you said you didn't want to use interrupts :-)
+ */
+
+int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp, 
+  const char * ptr, int count, int flags)
+{
+    1708:	3005883a 	mov	r2,r6
+  unsigned int base = sp->base;
+
+  const char * end = ptr + count;
+    170c:	298d883a 	add	r6,r5,r6
+
+  while (ptr < end)
+    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
+    1710:	21c00104 	addi	r7,r4,4
+{
+  unsigned int base = sp->base;
+
+  const char * end = ptr + count;
+
+  while (ptr < end)
+    1714:	2980072e 	bgeu	r5,r6,1734 <altera_avalon_jtag_uart_write+0x30>
+    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
+    1718:	38c00037 	ldwio	r3,0(r7)
+    171c:	18ffffec 	andhi	r3,r3,65535
+    1720:	183ffc26 	beq	r3,zero,1714 <_gp+0xffff7f98>
+      IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
+    1724:	28c00007 	ldb	r3,0(r5)
+    1728:	20c00035 	stwio	r3,0(r4)
+    172c:	29400044 	addi	r5,r5,1
+    1730:	003ff806 	br	1714 <_gp+0xffff7f98>
+
+  return count;
+}
+    1734:	f800283a 	ret
+
+00001738 <alt_dcache_flush_all>:
+/*
+ * alt_dcache_flush_all() is called to flush the entire data cache.
+ */
+
+void alt_dcache_flush_all (void)
+{
+    1738:	f800283a 	ret
+
+0000173c <alt_icache_flush_all>:
+/*
+ * alt_icache_flush_all() is called to flush the entire instruction cache.
+ */
+
+void alt_icache_flush_all (void)
+{
+    173c:	f800283a 	ret
+
+00001740 <altera_nios2_gen2_irq_init>:
+ * To initialize the internal interrupt controller, just clear the IENABLE
+ * register so that all possible IRQs are disabled.
+ */
+void altera_nios2_gen2_irq_init(void) 
+{
+    NIOS2_WRITE_IENABLE(0);
+    1740:	000170fa 	wrctl	ienable,zero
+    1744:	f800283a 	ret
+
+00001748 <strlen>:
+    1748:	2005883a 	mov	r2,r4
+    174c:	10c00007 	ldb	r3,0(r2)
+    1750:	18000226 	beq	r3,zero,175c <strlen+0x14>
+    1754:	10800044 	addi	r2,r2,1
+    1758:	003ffc06 	br	174c <_gp+0xffff7fd0>
+    175c:	1105c83a 	sub	r2,r2,r4
+    1760:	f800283a 	ret
