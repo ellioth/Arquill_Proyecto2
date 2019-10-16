@@ -19,14 +19,14 @@ module pruebaS7 (
 	wire  [31:0] nios_cpu_data_master_readdata;                          // mm_interconnect_0:NIOS_CPU_data_master_readdata -> NIOS_CPU:d_readdata
 	wire         nios_cpu_data_master_waitrequest;                       // mm_interconnect_0:NIOS_CPU_data_master_waitrequest -> NIOS_CPU:d_waitrequest
 	wire         nios_cpu_data_master_debugaccess;                       // NIOS_CPU:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:NIOS_CPU_data_master_debugaccess
-	wire  [13:0] nios_cpu_data_master_address;                           // NIOS_CPU:d_address -> mm_interconnect_0:NIOS_CPU_data_master_address
+	wire  [16:0] nios_cpu_data_master_address;                           // NIOS_CPU:d_address -> mm_interconnect_0:NIOS_CPU_data_master_address
 	wire   [3:0] nios_cpu_data_master_byteenable;                        // NIOS_CPU:d_byteenable -> mm_interconnect_0:NIOS_CPU_data_master_byteenable
 	wire         nios_cpu_data_master_read;                              // NIOS_CPU:d_read -> mm_interconnect_0:NIOS_CPU_data_master_read
 	wire         nios_cpu_data_master_write;                             // NIOS_CPU:d_write -> mm_interconnect_0:NIOS_CPU_data_master_write
 	wire  [31:0] nios_cpu_data_master_writedata;                         // NIOS_CPU:d_writedata -> mm_interconnect_0:NIOS_CPU_data_master_writedata
 	wire  [31:0] nios_cpu_instruction_master_readdata;                   // mm_interconnect_0:NIOS_CPU_instruction_master_readdata -> NIOS_CPU:i_readdata
 	wire         nios_cpu_instruction_master_waitrequest;                // mm_interconnect_0:NIOS_CPU_instruction_master_waitrequest -> NIOS_CPU:i_waitrequest
-	wire  [13:0] nios_cpu_instruction_master_address;                    // NIOS_CPU:i_address -> mm_interconnect_0:NIOS_CPU_instruction_master_address
+	wire  [16:0] nios_cpu_instruction_master_address;                    // NIOS_CPU:i_address -> mm_interconnect_0:NIOS_CPU_instruction_master_address
 	wire         nios_cpu_instruction_master_read;                       // NIOS_CPU:i_read -> mm_interconnect_0:NIOS_CPU_instruction_master_read
 	wire         mm_interconnect_0_uart_avalon_jtag_slave_chipselect;    // mm_interconnect_0:UART_avalon_jtag_slave_chipselect -> UART:av_chipselect
 	wire  [31:0] mm_interconnect_0_uart_avalon_jtag_slave_readdata;      // UART:av_readdata -> mm_interconnect_0:UART_avalon_jtag_slave_readdata
@@ -45,7 +45,7 @@ module pruebaS7 (
 	wire  [31:0] mm_interconnect_0_nios_cpu_debug_mem_slave_writedata;   // mm_interconnect_0:NIOS_CPU_debug_mem_slave_writedata -> NIOS_CPU:debug_mem_slave_writedata
 	wire         mm_interconnect_0_ram_s1_chipselect;                    // mm_interconnect_0:RAM_s1_chipselect -> RAM:chipselect
 	wire  [31:0] mm_interconnect_0_ram_s1_readdata;                      // RAM:readdata -> mm_interconnect_0:RAM_s1_readdata
-	wire   [9:0] mm_interconnect_0_ram_s1_address;                       // mm_interconnect_0:RAM_s1_address -> RAM:address
+	wire  [12:0] mm_interconnect_0_ram_s1_address;                       // mm_interconnect_0:RAM_s1_address -> RAM:address
 	wire   [3:0] mm_interconnect_0_ram_s1_byteenable;                    // mm_interconnect_0:RAM_s1_byteenable -> RAM:byteenable
 	wire         mm_interconnect_0_ram_s1_write;                         // mm_interconnect_0:RAM_s1_write -> RAM:write
 	wire  [31:0] mm_interconnect_0_ram_s1_writedata;                     // mm_interconnect_0:RAM_s1_writedata -> RAM:writedata
@@ -84,9 +84,15 @@ module pruebaS7 (
 	wire   [1:0] mm_interconnect_0_seg_7_4_s1_address;                   // mm_interconnect_0:SEG_7_4_s1_address -> SEG_7_4:address
 	wire         mm_interconnect_0_seg_7_4_s1_write;                     // mm_interconnect_0:SEG_7_4_s1_write -> SEG_7_4:write_n
 	wire  [31:0] mm_interconnect_0_seg_7_4_s1_writedata;                 // mm_interconnect_0:SEG_7_4_s1_writedata -> SEG_7_4:writedata
+	wire         mm_interconnect_0_timer_0_s1_chipselect;                // mm_interconnect_0:timer_0_s1_chipselect -> timer_0:chipselect
+	wire  [15:0] mm_interconnect_0_timer_0_s1_readdata;                  // timer_0:readdata -> mm_interconnect_0:timer_0_s1_readdata
+	wire   [2:0] mm_interconnect_0_timer_0_s1_address;                   // mm_interconnect_0:timer_0_s1_address -> timer_0:address
+	wire         mm_interconnect_0_timer_0_s1_write;                     // mm_interconnect_0:timer_0_s1_write -> timer_0:write_n
+	wire  [15:0] mm_interconnect_0_timer_0_s1_writedata;                 // mm_interconnect_0:timer_0_s1_writedata -> timer_0:writedata
 	wire         irq_mapper_receiver0_irq;                               // UART:av_irq -> irq_mapper:receiver0_irq
+	wire         irq_mapper_receiver1_irq;                               // timer_0:irq -> irq_mapper:receiver1_irq
 	wire  [31:0] nios_cpu_irq_irq;                                       // irq_mapper:sender_irq -> NIOS_CPU:irq
-	wire         rst_controller_reset_out_reset;                         // rst_controller:reset_out -> [BTN:reset_n, LED:reset_n, NIOS_CPU:reset_n, RAM:reset, SEG_7_0:reset_n, SEG_7_1:reset_n, SEG_7_2:reset_n, SEG_7_3:reset_n, SEG_7_4:reset_n, SW:reset_n, UART:rst_n, irq_mapper:reset, mm_interconnect_0:NIOS_CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                         // rst_controller:reset_out -> [BTN:reset_n, LED:reset_n, NIOS_CPU:reset_n, RAM:reset, SEG_7_0:reset_n, SEG_7_1:reset_n, SEG_7_2:reset_n, SEG_7_3:reset_n, SEG_7_4:reset_n, SW:reset_n, UART:rst_n, irq_mapper:reset, mm_interconnect_0:NIOS_CPU_reset_reset_bridge_in_reset_reset, rst_translator:in_reset, timer_0:reset_n]
 	wire         rst_controller_reset_out_reset_req;                     // rst_controller:reset_req -> [NIOS_CPU:reset_req, RAM:reset_req, rst_translator:reset_req_in]
 
 	pruebaS7_BTN btn (
@@ -227,6 +233,17 @@ module pruebaS7 (
 		.av_irq         (irq_mapper_receiver0_irq)                              //               irq.irq
 	);
 
+	pruebaS7_timer_0 timer_0 (
+		.clk        (clk_clk),                                 //   clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),         // reset.reset_n
+		.address    (mm_interconnect_0_timer_0_s1_address),    //    s1.address
+		.writedata  (mm_interconnect_0_timer_0_s1_writedata),  //      .writedata
+		.readdata   (mm_interconnect_0_timer_0_s1_readdata),   //      .readdata
+		.chipselect (mm_interconnect_0_timer_0_s1_chipselect), //      .chipselect
+		.write_n    (~mm_interconnect_0_timer_0_s1_write),     //      .write_n
+		.irq        (irq_mapper_receiver1_irq)                 //   irq.irq
+	);
+
 	pruebaS7_mm_interconnect_0 mm_interconnect_0 (
 		.CLK_clk_clk                                (clk_clk),                                                //                              CLK_clk.clk
 		.NIOS_CPU_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                         // NIOS_CPU_reset_reset_bridge_in_reset.reset
@@ -291,6 +308,11 @@ module pruebaS7 (
 		.SEG_7_4_s1_chipselect                      (mm_interconnect_0_seg_7_4_s1_chipselect),                //                                     .chipselect
 		.SW_s1_address                              (mm_interconnect_0_sw_s1_address),                        //                                SW_s1.address
 		.SW_s1_readdata                             (mm_interconnect_0_sw_s1_readdata),                       //                                     .readdata
+		.timer_0_s1_address                         (mm_interconnect_0_timer_0_s1_address),                   //                           timer_0_s1.address
+		.timer_0_s1_write                           (mm_interconnect_0_timer_0_s1_write),                     //                                     .write
+		.timer_0_s1_readdata                        (mm_interconnect_0_timer_0_s1_readdata),                  //                                     .readdata
+		.timer_0_s1_writedata                       (mm_interconnect_0_timer_0_s1_writedata),                 //                                     .writedata
+		.timer_0_s1_chipselect                      (mm_interconnect_0_timer_0_s1_chipselect),                //                                     .chipselect
 		.UART_avalon_jtag_slave_address             (mm_interconnect_0_uart_avalon_jtag_slave_address),       //               UART_avalon_jtag_slave.address
 		.UART_avalon_jtag_slave_write               (mm_interconnect_0_uart_avalon_jtag_slave_write),         //                                     .write
 		.UART_avalon_jtag_slave_read                (mm_interconnect_0_uart_avalon_jtag_slave_read),          //                                     .read
@@ -304,6 +326,7 @@ module pruebaS7 (
 		.clk           (clk_clk),                        //       clk.clk
 		.reset         (rst_controller_reset_out_reset), // clk_reset.reset
 		.receiver0_irq (irq_mapper_receiver0_irq),       // receiver0.irq
+		.receiver1_irq (irq_mapper_receiver1_irq),       // receiver1.irq
 		.sender_irq    (nios_cpu_irq_irq)                //    sender.irq
 	);
 

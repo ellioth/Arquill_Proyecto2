@@ -2,27 +2,34 @@
 # 
 preplace inst pruebaS7.NIOS_CPU.cpu -pg 1
 preplace inst pruebaS7.NIOS_CPU.reset_bridge -pg 1
-preplace inst pruebaS7.SEG_7_0 -pg 1 -lvl 3 -y 310
+preplace inst pruebaS7.SEG_7_0 -pg 1 -lvl 3 -y 510
 preplace inst pruebaS7.BTN -pg 1 -lvl 3 -y 30
-preplace inst pruebaS7.SEG_7_1 -pg 1 -lvl 3 -y 410
+preplace inst pruebaS7.SEG_7_1 -pg 1 -lvl 3 -y 610
+preplace inst pruebaS7.SEG_7_2 -pg 1 -lvl 3 -y 130
+preplace inst pruebaS7.SEG_7_3 -pg 1 -lvl 3 -y 810
+preplace inst pruebaS7.SEG_7_4 -pg 1 -lvl 3 -y 910
 preplace inst pruebaS7.NIOS_CPU.clock_bridge -pg 1
-preplace inst pruebaS7.NIOS_CPU -pg 1 -lvl 2 -y 170
-preplace inst pruebaS7.UART -pg 1 -lvl 3 -y 210
-preplace inst pruebaS7.RAM -pg 1 -lvl 3 -y 130
-preplace inst pruebaS7.LED -pg 1 -lvl 3 -y 610
+preplace inst pruebaS7.timer_0 -pg 1 -lvl 3 -y 410
+preplace inst pruebaS7.NIOS_CPU -pg 1 -lvl 2 -y 270
+preplace inst pruebaS7.UART -pg 1 -lvl 3 -y 310
+preplace inst pruebaS7.RAM -pg 1 -lvl 3 -y 230
+preplace inst pruebaS7.LED -pg 1 -lvl 3 -y 1010
 preplace inst pruebaS7 -pg 1 -lvl 1 -y 40 -regy -20
-preplace inst pruebaS7.SW -pg 1 -lvl 3 -y 510
+preplace inst pruebaS7.SW -pg 1 -lvl 3 -y 710
 preplace inst pruebaS7.CLK -pg 1 -lvl 1 -y 190
-preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.btn_pin,(SLAVE)BTN.external_connection) 1 0 3 NJ 60 NJ 60 NJ
-preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)SEG_7_0.external_connection,(SLAVE)pruebaS7.seg_7_0_pin) 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.reset,(SLAVE)CLK.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)CLK.clk_in_reset,(SLAVE)pruebaS7.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)SEG_7_0.external_connection,(SLAVE)pruebaS7.seg_7_0_pin) 1 0 3 NJ 540 NJ 540 NJ
 preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.clk,(SLAVE)CLK.clk_in) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>pruebaS7</net_container>(SLAVE)LED.clk,(SLAVE)SEG_7_0.clk,(SLAVE)NIOS_CPU.clk,(SLAVE)RAM.clk1,(SLAVE)BTN.clk,(SLAVE)UART.clk,(SLAVE)SEG_7_1.clk,(SLAVE)SW.clk,(MASTER)CLK.clk) 1 1 2 290 130 730
-preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)LED.external_connection,(SLAVE)pruebaS7.led_pin) 1 0 3 NJ 640 NJ 640 NJ
-preplace netloc FAN_OUT<net_container>pruebaS7</net_container>(SLAVE)SEG_7_0.reset,(SLAVE)UART.reset,(SLAVE)RAM.reset1,(MASTER)CLK.clk_reset,(SLAVE)SEG_7_1.reset,(SLAVE)LED.reset,(SLAVE)SW.reset,(SLAVE)NIOS_CPU.reset,(SLAVE)BTN.reset) 1 1 2 290 660 690
-preplace netloc INTERCONNECT<net_container>pruebaS7</net_container>(MASTER)NIOS_CPU.instruction_master,(SLAVE)SEG_7_1.s1,(MASTER)NIOS_CPU.data_master,(SLAVE)NIOS_CPU.debug_mem_slave,(SLAVE)UART.avalon_jtag_slave,(SLAVE)RAM.s1,(SLAVE)SW.s1,(SLAVE)LED.s1,(SLAVE)SEG_7_0.s1,(SLAVE)BTN.s1) 1 1 2 310 680 710
-preplace netloc POINT_TO_POINT<net_container>pruebaS7</net_container>(SLAVE)UART.irq,(MASTER)NIOS_CPU.irq) 1 2 1 N
-preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.sw_pin,(SLAVE)SW.external_connection) 1 0 3 NJ 540 NJ 540 NJ
-preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.seg_7_1_pin,(SLAVE)SEG_7_1.external_connection) 1 0 3 NJ 440 NJ 440 NJ
-levelinfo -pg 1 0 80 920
-levelinfo -hier pruebaS7 90 120 450 760 910
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.seg_7_3_pin,(SLAVE)SEG_7_3.external_connection) 1 0 3 NJ 840 NJ 840 NJ
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)LED.external_connection,(SLAVE)pruebaS7.led_pin) 1 0 3 NJ 1040 NJ 1040 NJ
+preplace netloc INTERCONNECT<net_container>pruebaS7</net_container>(MASTER)NIOS_CPU.instruction_master,(MASTER)NIOS_CPU.data_master,(SLAVE)BTN.s1,(SLAVE)SEG_7_3.s1,(SLAVE)SEG_7_4.s1,(SLAVE)LED.s1,(SLAVE)timer_0.s1,(SLAVE)UART.avalon_jtag_slave,(SLAVE)SEG_7_1.s1,(SLAVE)SEG_7_0.s1,(SLAVE)SEG_7_2.s1,(SLAVE)RAM.s1,(SLAVE)NIOS_CPU.debug_mem_slave,(SLAVE)SW.s1) 1 1 2 330 1080 690
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)SEG_7_2.external_connection,(SLAVE)pruebaS7.seg_7_2_pin) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc FAN_OUT<net_container>pruebaS7</net_container>(MASTER)NIOS_CPU.irq,(SLAVE)timer_0.irq,(SLAVE)UART.irq) 1 2 1 750
+preplace netloc FAN_OUT<net_container>pruebaS7</net_container>(SLAVE)SW.clk,(SLAVE)SEG_7_0.clk,(SLAVE)SEG_7_4.clk,(SLAVE)LED.clk,(SLAVE)SEG_7_3.clk,(MASTER)CLK.clk,(SLAVE)RAM.clk1,(SLAVE)NIOS_CPU.clk,(SLAVE)timer_0.clk,(SLAVE)SEG_7_1.clk,(SLAVE)SEG_7_2.clk,(SLAVE)UART.clk,(SLAVE)BTN.clk) 1 1 2 310 960 710
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)BTN.external_connection,(SLAVE)pruebaS7.btn_pin) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)SEG_7_4.external_connection,(SLAVE)pruebaS7.seg_7_4_pin) 1 0 3 NJ 940 NJ 940 NJ
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.sw_pin,(SLAVE)SW.external_connection) 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc FAN_OUT<net_container>pruebaS7</net_container>(SLAVE)LED.reset,(SLAVE)SEG_7_2.reset,(SLAVE)NIOS_CPU.reset,(SLAVE)SEG_7_1.reset,(SLAVE)SEG_7_0.reset,(SLAVE)SEG_7_4.reset,(SLAVE)timer_0.reset,(SLAVE)UART.reset,(MASTER)CLK.clk_reset,(SLAVE)SW.reset,(SLAVE)BTN.reset,(SLAVE)SEG_7_3.reset,(SLAVE)RAM.reset1) 1 1 2 290 1060 730
+preplace netloc EXPORT<net_container>pruebaS7</net_container>(SLAVE)pruebaS7.seg_7_1_pin,(SLAVE)SEG_7_1.external_connection) 1 0 3 NJ 640 NJ 640 NJ
+levelinfo -pg 1 0 80 940
+levelinfo -hier pruebaS7 90 120 450 780 930

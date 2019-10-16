@@ -16,10 +16,18 @@ Progress: Adding SEG_7_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module SEG_7_0
 Progress: Adding SEG_7_1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module SEG_7_1
+Progress: Adding SEG_7_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module SEG_7_2
+Progress: Adding SEG_7_3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module SEG_7_3
+Progress: Adding SEG_7_4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module SEG_7_4
 Progress: Adding SW [altera_avalon_pio 18.1]
 Progress: Parameterizing module SW
 Progress: Adding UART [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module UART
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -48,10 +56,18 @@ Progress: Adding SEG_7_0 [altera_avalon_pio 18.1]
 Progress: Parameterizing module SEG_7_0
 Progress: Adding SEG_7_1 [altera_avalon_pio 18.1]
 Progress: Parameterizing module SEG_7_1
+Progress: Adding SEG_7_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module SEG_7_2
+Progress: Adding SEG_7_3 [altera_avalon_pio 18.1]
+Progress: Parameterizing module SEG_7_3
+Progress: Adding SEG_7_4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module SEG_7_4
 Progress: Adding SW [altera_avalon_pio 18.1]
 Progress: Parameterizing module SW
 Progress: Adding UART [altera_avalon_jtag_uart 18.1]
 Progress: Parameterizing module UART
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
 Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
@@ -61,30 +77,34 @@ Info: pruebaS7.SW: PIO inputs are not hardwired in test bench. Undefined values 
 Info: pruebaS7.UART: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
 Info: pruebaS7: Generating pruebaS7 "pruebaS7" for QUARTUS_SYNTH
 Info: BTN: Starting RTL generation for module 'pruebaS7_BTN'
-Info: BTN:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_BTN --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0002_BTN_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0002_BTN_gen//pruebaS7_BTN_component_configuration.pl  --do_build_sim=0  ]
+Info: BTN:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_BTN --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0002_BTN_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0002_BTN_gen//pruebaS7_BTN_component_configuration.pl  --do_build_sim=0  ]
 Info: BTN: Done RTL generation for module 'pruebaS7_BTN'
 Info: BTN: "pruebaS7" instantiated altera_avalon_pio "BTN"
 Info: LED: Starting RTL generation for module 'pruebaS7_LED'
-Info: LED:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_LED --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0003_LED_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0003_LED_gen//pruebaS7_LED_component_configuration.pl  --do_build_sim=0  ]
+Info: LED:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_LED --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0003_LED_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0003_LED_gen//pruebaS7_LED_component_configuration.pl  --do_build_sim=0  ]
 Info: LED: Done RTL generation for module 'pruebaS7_LED'
 Info: LED: "pruebaS7" instantiated altera_avalon_pio "LED"
 Info: NIOS_CPU: "pruebaS7" instantiated altera_nios2_gen2 "NIOS_CPU"
 Info: RAM: Starting RTL generation for module 'pruebaS7_RAM'
-Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=pruebaS7_RAM --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0004_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0004_RAM_gen//pruebaS7_RAM_component_configuration.pl  --do_build_sim=0  ]
+Info: RAM:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=pruebaS7_RAM --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0004_RAM_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0004_RAM_gen//pruebaS7_RAM_component_configuration.pl  --do_build_sim=0  ]
 Info: RAM: Done RTL generation for module 'pruebaS7_RAM'
 Info: RAM: "pruebaS7" instantiated altera_avalon_onchip_memory2 "RAM"
 Info: SEG_7_0: Starting RTL generation for module 'pruebaS7_SEG_7_0'
-Info: SEG_7_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_SEG_7_0 --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0005_SEG_7_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0005_SEG_7_0_gen//pruebaS7_SEG_7_0_component_configuration.pl  --do_build_sim=0  ]
+Info: SEG_7_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_SEG_7_0 --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0005_SEG_7_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0005_SEG_7_0_gen//pruebaS7_SEG_7_0_component_configuration.pl  --do_build_sim=0  ]
 Info: SEG_7_0: Done RTL generation for module 'pruebaS7_SEG_7_0'
 Info: SEG_7_0: "pruebaS7" instantiated altera_avalon_pio "SEG_7_0"
 Info: SW: Starting RTL generation for module 'pruebaS7_SW'
-Info: SW:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_SW --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0006_SW_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0006_SW_gen//pruebaS7_SW_component_configuration.pl  --do_build_sim=0  ]
+Info: SW:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pruebaS7_SW --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0006_SW_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0006_SW_gen//pruebaS7_SW_component_configuration.pl  --do_build_sim=0  ]
 Info: SW: Done RTL generation for module 'pruebaS7_SW'
 Info: SW: "pruebaS7" instantiated altera_avalon_pio "SW"
 Info: UART: Starting RTL generation for module 'pruebaS7_UART'
-Info: UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=pruebaS7_UART --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0007_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0007_UART_gen//pruebaS7_UART_component_configuration.pl  --do_build_sim=0  ]
+Info: UART:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=pruebaS7_UART --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0007_UART_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0007_UART_gen//pruebaS7_UART_component_configuration.pl  --do_build_sim=0  ]
 Info: UART: Done RTL generation for module 'pruebaS7_UART'
 Info: UART: "pruebaS7" instantiated altera_avalon_jtag_uart "UART"
+Info: timer_0: Starting RTL generation for module 'pruebaS7_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=pruebaS7_timer_0 --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0008_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0008_timer_0_gen//pruebaS7_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'pruebaS7_timer_0'
+Info: timer_0: "pruebaS7" instantiated altera_avalon_timer "timer_0"
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
@@ -93,23 +113,27 @@ Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "pruebaS7" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "pruebaS7" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "pruebaS7" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'pruebaS7_NIOS_CPU_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=pruebaS7_NIOS_CPU_cpu --dir=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0010_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8184_5309217303248612027.dir/0010_cpu_gen//pruebaS7_NIOS_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2019.10.14 23:41:05 (*) Starting Nios II generation
-Info: cpu: # 2019.10.14 23:41:05 (*)   Checking for plaintext license.
-Info: cpu: # 2019.10.14 23:41:05 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2019.10.14 23:41:05 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2019.10.14 23:41:05 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2019.10.14 23:41:05 (*)   Plaintext license not found.
-Info: cpu: # 2019.10.14 23:41:05 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2019.10.14 23:41:05 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2019.10.14 23:41:05 (*)   Creating all objects for CPU
-Info: cpu: # 2019.10.14 23:41:08 (*)   Generating RTL from CPU objects
-Info: cpu: # 2019.10.14 23:41:08 (*)   Creating plain-text RTL
-Info: cpu: # 2019.10.14 23:41:09 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=pruebaS7_NIOS_CPU_cpu --dir=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0011_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Usuario/AppData/Local/Temp/alt8185_6460480334036775426.dir/0011_cpu_gen//pruebaS7_NIOS_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.10.15 23:09:47 (*) Starting Nios II generation
+Info: cpu: # 2019.10.15 23:09:47 (*)   Checking for plaintext license.
+Info: cpu: # 2019.10.15 23:09:48 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.10.15 23:09:48 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.10.15 23:09:48 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.10.15 23:09:48 (*)   Plaintext license not found.
+Info: cpu: # 2019.10.15 23:09:48 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.10.15 23:09:48 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.10.15 23:09:48 (*)   Creating all objects for CPU
+Info: cpu: # 2019.10.15 23:09:50 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.10.15 23:09:50 (*)   Creating plain-text RTL
+Info: cpu: # 2019.10.15 23:09:51 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'pruebaS7_NIOS_CPU_cpu'
 Info: cpu: "NIOS_CPU" instantiated altera_nios2_gen2_unit "cpu"
 Info: NIOS_CPU_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "NIOS_CPU_data_master_translator"
@@ -133,6 +157,6 @@ Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "r
 Info: Reusing file C:/Users/Usuario/Documents/Qprojects/pruebaNuevoProc/pruebaS7/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: pruebaS7: Done "pruebaS7" with 30 modules, 43 files
+Info: pruebaS7: Done "pruebaS7" with 31 modules, 44 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis
